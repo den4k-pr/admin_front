@@ -1,0 +1,34 @@
+@import '../../../assets/styles/mixins';
+
+.input {
+	@apply relative block mb-5;
+
+	> input {
+		@apply p-2 w-full text-xs rounded-md overflow-hidden block bg-white gdark:bg-zinc-900 gdark:text-white;
+		@include shadow();
+
+		&::placeholder {
+			@apply text-gray-400 gdark:text-white gdark:text-opacity-50 font-light;
+		}
+
+		&:focus-visible {
+			outline: none;
+		}
+	}
+
+	&.withIcon {
+		@apply mb-0;
+		> input {
+			@apply pl-10;
+		}
+	}
+
+	> .icon {
+		@apply absolute top-2 left-2 text-stone-600 text-lg;
+	}
+}
+
+.error {
+	@apply absolute -bottom-4 left-0 w-full text-primary gdark:text-purple-400;
+	font-size: 0.75rem;
+}

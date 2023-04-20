@@ -1,0 +1,25 @@
+:global(.dark) .progress .overflow .bar {
+	border: 28px solid rgba(255, 255, 255, 0.2); /* half gray, */
+	border-bottom-color: #b4ff7a; /* half azure */
+	border-right-color: #b4ff7a;
+}
+
+.progress {
+	@apply relative mb-8 text-center;
+
+	.overflow {
+		@apply relative overflow-hidden w-52 h-24 mx-auto;
+
+		.bar {
+			@apply absolute top-0 left-0 w-52 h-52 rounded-full box-border;
+			border: 28px solid #fafafa; /* half gray, */
+			border-bottom-color: #9ff162; /* half azure */
+			border-right-color: #9ff162;
+		}
+	}
+
+	.percent {
+		@apply font-semibold text-2xl -mt-9;
+		color: #fafafa;
+	}
+}

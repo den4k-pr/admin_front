@@ -1,0 +1,7 @@
+.description {
+	@apply relative;
+}
+
+.button {
+	@apply text-xl absolute right-2 top-1.5 text-primary gdark:text-purple-400 opacity-75 hover:opacity-100 transition-opacity;
+}
